@@ -1,4 +1,5 @@
 import s from './PhoneBook.module.css';
+import propTypes from 'prop-types';
 
 const PhoneBookItem = ({ id, name, number, onRemove }) => {
   return (
@@ -17,6 +18,18 @@ const PhoneBook = ({ contacts, onRemove }) => {
       ))}
     </ul>
   );
+};
+
+PhoneBookItem.propTypes = {
+  id: propTypes.number,
+  name: propTypes.string,
+  number: propTypes.number,
+  onRemove: propTypes.func,
+};
+
+PhoneBook.propTypes = {
+  contacts: propTypes.arrayOf(propTypes.string),
+  onRemove: propTypes.func,
 };
 
 export default PhoneBook;
