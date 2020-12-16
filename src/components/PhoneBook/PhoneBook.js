@@ -21,14 +21,14 @@ const PhoneBook = ({ contacts, onRemove }) => {
 };
 
 PhoneBookItem.propTypes = {
-  id: propTypes.number,
+  id: propTypes.string,
   name: propTypes.string,
-  number: propTypes.number,
+  number: propTypes.string,
   onRemove: propTypes.func,
 };
 
 PhoneBook.propTypes = {
-  contacts: propTypes.arrayOf(propTypes.string),
+  contacts: propTypes.arrayOf(propTypes.object),
   onRemove: propTypes.func,
 };
 
